@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+fastapi==0.88.*
+uvicorn[standard]==0.29.*
+# PyTorch for CUDA 11.8
+torch==2.7.0
+torchaudio==2.7.0
+torchvision==0.22.0
+# rvc==1.4.0 # Removed PyPI version
+# Using specific versions from JarodMica based on rvc_infer.py source repo - REMOVED
+rvc @ git+https://github.com/JarodMica/rvc.git
+# rvc_tts_pipe @ git+https://github.com/JarodMica/rvc-tts-pipeline.git
+ffmpeg-python==0.2.*
+python-multipart==0.0.9
+aiofiles==23.2.*
+PyYAML>=6.0 # Added for rvc_infer.py dependency 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>RVC-v2 Voice Converter</title>
+<style>
+    body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+    h1 { color: #333; }
+    input, select, button { margin-bottom: 10px; padding: 8px; border-radius: 4px; border: 1px solid #ddd; }
+    button { background-color: #007bff; color: white; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    progress { width: 100%; margin-bottom: 10px; }
+    #player { width: 100%; margin-top:10px; }
+    a { color: #007bff; text-decoration: none; display: block; margin-top: 10px;}
+    a:hover { text-decoration: underline; }
+    .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto;}
+    .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>AI Singer</h1>
+    <label for="file">Choose an audio file:</label><br>
+    <input type="file" id="file" accept="audio/*"><br>
+    
+    <label for="artist">Choose an artist:</label><br>
+    <select id="artist"></select><br>
+    
+    <button id="go">Convert</button>
+    
+    <progress id="prog" max="100" value="0" class="hidden"></progress>
+    <div id="status-message"></div>
+    
+    <audio id="player" controls class="hidden"></audio>
+    <div id="download-link-container"></div> 
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> 
